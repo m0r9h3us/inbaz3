@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@/*": ["./*"],
       "@inbaz3/primitives": ["libs/frontend/primitives/src/index.ts"],
       "@inbaz3/utils": ["libs/frontend/utils/src/index.ts"]
     }
