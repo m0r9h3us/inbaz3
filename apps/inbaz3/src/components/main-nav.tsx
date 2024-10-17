@@ -1,6 +1,6 @@
-import Link from "next/link"
-
-import { cn } from '@inbaz3/utils'
+import Link from "next/link";
+import { cn } from '@inbaz3/utils';
+import { Calendar, Users, Link as LinkIcon } from 'lucide-react';
 
 export function MainNav({
   className,
@@ -12,23 +12,26 @@ export function MainNav({
       {...props}
     >
       <Link
-        href="/projects"
-        className="text-sm font-medium transition-colors hover:text-primary"
+        href="/calendar"
+        className="text-sm font-medium transition-colors hover:text-primary flex items-center"
       >
-        Projects
+        <span className="icon lg:hidden"><Calendar /></span>
+        <span className="text hidden lg:block">Kalendar</span>
       </Link>
       <Link
-        href="/roadmap"
-        className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+        href="/meetups"
+        className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary flex items-center"
       >
-        Roadmap
+        <span className="icon lg:hidden"><Users /></span>
+        <span className="text hidden lg:block">Jongliertreffen</span>
       </Link>
       <Link
-        href="/settings"
-        className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+        href="/links"
+        className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary flex items-center"
       >
-        Settings
+        <span className="icon lg:hidden"><LinkIcon /></span>
+        <span className="text hidden lg:block">Links</span>
       </Link>
     </nav>
-  )
+  );
 }
