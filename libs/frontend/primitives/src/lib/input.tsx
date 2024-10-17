@@ -1,5 +1,6 @@
 import * as React from "react"
-import { cn } from "../../../utils/src/lib/cn"
+
+import { cn } from "@inbaz3/utils"
 
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface

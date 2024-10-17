@@ -37,7 +37,7 @@ import {
   SelectValue
 } from '@inbaz3/primitives'
 
-import { cn } from '@inbaz3/primitives'
+import { cn } from '@inbaz3/utils'
 
 const groups = [
   {

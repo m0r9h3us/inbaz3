@@ -4,7 +4,7 @@ import * as React from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { DayPicker } from "react-day-picker"
 
-import { cn } from "../../../utils/src/lib/cn"
+import { cn } from "@inbaz3/utils"
 import { buttonVariants } from "./button"
 
 

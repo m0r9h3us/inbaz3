@@ -11,5 +11,3 @@ export * from './lib/navigation-menu';
 export * from './lib/popover';
 export * from './lib/select';
 export * from './lib/tabs';
-
-export * from '../../utils/src/lib/cn';

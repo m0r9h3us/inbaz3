@@ -1,5 +1,5 @@
 import { Inter as FontSans } from "next/font/google"
-import { cn } from '@inbaz3/primitives'
+import { cn } from '@inbaz3/utils'
 
 
 import { ThemeProvider } from "../components/theme-provider";
