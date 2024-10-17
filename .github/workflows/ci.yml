@@ -28,5 +28,6 @@ jobs:
 
       # Run lint, test, and build commands
       - run: npm run lint
-      - run: npm test
+      - run: npm run tsc
       - run: npm run build
+      - run: npm run test
