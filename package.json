@@ -6,7 +6,9 @@
     "build": "nx run-many --target=build --all",
     "lint": "nx run-many --target=lint --all",
     "serve:frontend": "nx dev inbaz3",
-    "tsc": "nx run-many --target=tsc --all",
+    "tsc": "npm run tsc:app && npm run tsc:lib",
+    "tsc:app": "nx run-many --target=tsc-app --all",
+    "tsc:lib": "nx run-many --target=tsc-lib --all",
     "test": "nx run-many --target=test --all"
   },
   "private": true,

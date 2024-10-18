@@ -24,7 +24,12 @@
     {
       "files": ["*.ts", "*.tsx"],
       "extends": ["plugin:@nx/typescript"],
-      "rules": {}
+      "rules": {
+        "no-unused-vars": [
+          "error",
+          { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }
+        ]
+      }
     },
     {
       "files": ["*.js", "*.jsx"],

@@ -1,10 +1,7 @@
-import { ReactNode } from "react"
-import Link from "next/link"
-import Image from 'next/image';
+import Image from 'next/image'
 
-import inbazIcon from "../../public/images/inbaz-icon.svg";
-import jugglingIcon from "../../public/images/juggling-icon.svg";
-
+import inbazIcon from '../../public/images/inbaz-icon.svg'
+import jugglingIcon from '../../public/images/juggling-icon.svg'
 
 export const HeaderLogo = () => {
     return (
@@ -22,8 +19,5 @@ export const HeaderLogo = () => {
                 alt="Immernoch besser als Zaubern"
             />
         </div>
-
     )
 }
-
-

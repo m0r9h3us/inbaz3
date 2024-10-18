@@ -6,6 +6,6 @@
   "tags": [],
   "// targets": "to see all targets run: nx show project primitives --web",
   "targets": {
-    "tsc": {}
+    "tsc-lib": {}
   }
 }
