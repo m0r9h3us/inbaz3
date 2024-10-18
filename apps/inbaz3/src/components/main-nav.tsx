@@ -15,22 +15,13 @@ export function MainNav({
         href="/calendar"
         className="text-sm font-medium transition-colors hover:text-primary flex items-center"
       >
-        <span className="icon md:hidden"><Calendar /></span>
-        <span className="text hidden md:block">Kalendar</span>
+        <span className="text">Kalendar</span>
       </Link>
       <Link
         href="/meetups"
         className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary flex items-center"
       >
-        <span className="icon md:hidden"><Users /></span>
-        <span className="text hidden md:block">Jongliertreffen</span>
-      </Link>
-      <Link
-        href="/links"
-        className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary flex items-center"
-      >
-        <span className="icon md:hidden"><LinkIcon /></span>
-        <span className="text hidden md:block">Links</span>
+        <span className="text block">Jongliertreffen</span>
       </Link>
     </nav>
   );

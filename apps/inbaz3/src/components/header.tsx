@@ -1,32 +1,26 @@
-import { ReactNode } from "react"
-import Link from "next/link"
+import { HeaderLogo } from "./header-logo"
+import { HeaderNavigation } from "./header-navigation"
+import { ModeToggle } from "./mode-toggle"
+import { Search } from "./search"
+import { UserNav } from "./user-nav"
 
-type HeaderProps = {
-    children: ReactNode
-}
 
-export const Header = (props: HeaderProps) => {
-    const { children } = props
+export const Header = () => {
 
     return (
-        <header className="flex h-16 items-center px-4 justify-start flex-1">
-            {children}
-        </header>
+        <div className="flex h-16 items-center px-4 justify-between flex-1 border-b">
+            <div className="flex gap-4">
+                <HeaderLogo />
+                <HeaderNavigation />
+            </div>
+
+
+            <div className="flex gap-4 items-center">
+                <Search />
+                <ModeToggle />
+                <UserNav />
+            </div>
+        </div>
 
     )
 }
-
-
-// export const Header = (props: HeaderProps) => {
-//     const { children } = props
-
-//     return (
-//         <div className="flex h-16 items-center px-4 justify-start flex-1">
-//             <HeaderLogo />
-//             <div className="flex flex-1 justify-between">
-//                 {children}
-//             </div>
-//         </div>
-
-//     )
-// }

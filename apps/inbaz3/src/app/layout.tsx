@@ -3,12 +3,11 @@ import { cn } from '@inbaz3/utils'
 
 
 import { ThemeProvider } from "../components/theme-provider";
-import { UserNav } from "../components/user-nav";
-import { MainNav } from "../components/main-nav";
 
 import './global.css';
-import TeamSwitcher from "../components/team-switcher";
-import { Search } from "../components/search";
+
+import { Header } from "../components/header";
+
 
 
 const fontSans = FontSans({
@@ -35,7 +34,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="border-b">
+          {/* <div className="border-b">
             <div className="flex h-16 items-center px-4">
               <TeamSwitcher />
               <MainNav className="mx-6" />
@@ -44,7 +43,8 @@ export default function RootLayout({
                 <UserNav />
               </div>
             </div>
-          </div>
+          </div> */}
+          <Header />
           {/* <Header>
             <Header.Navigation>
               <NavigationMenuExample />
