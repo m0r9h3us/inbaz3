@@ -1,15 +1,22 @@
 'use client'
 
 import FullCalendar from '@fullcalendar/react'
-import dayGridPlugin from '@fullcalendar/daygrid' // a plugin!
-import interactionPlugin from '@fullcalendar/interaction' // a plugin!
+import dayGridPlugin from '@fullcalendar/daygrid'
 
 import './calendar.css'
 
-export default function Calendar() {
+import { EventInput } from '@fullcalendar/core'
+
+export type CalendarProps = {
+    events: EventInput[]
+}
+
+export default function Calendar(props: CalendarProps) {
+    const { events } = props
+
     return (
         <FullCalendar
-            plugins={[dayGridPlugin, interactionPlugin]}
+            plugins={[dayGridPlugin]}
             initialView="dayGridMonth"
             headerToolbar={{
                 left: 'prev,next',
@@ -17,13 +24,7 @@ export default function Calendar() {
             }}
             handleWindowResize={true}
             editable={false}
-            events={[
-                { title: 'event 1', start: '2024-12-01', end: '2024-12-07', id: '1' },
-                { title: 'event 2', start: '2024-12-01', end: '2024-12-07', id: '2' },
-                { title: 'event 3', start: '2024-12-01', end: '2024-12-07', id: '3' },
-                { title: 'event 4', start: '2024-12-01', end: '2024-12-07', id: '4' },
-                { title: 'event ', date: '2024-12-02', id: '5' },
-            ]}
+            events={events}
             eventClick={(info) => {
                 alert(info + info.event.id)
             }}

@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "analyze": "ANALYZE=true npm run build",
     "build": "nx run-many --target=build --all",
     "lint": "nx run-many --target=lint --all",
     "serve:frontend": "nx dev inbaz3",
@@ -15,7 +16,6 @@
   "dependencies": {
     "@fullcalendar/core": "^6.1.15",
     "@fullcalendar/daygrid": "^6.1.15",
-    "@fullcalendar/interaction": "^6.1.15",
     "@fullcalendar/react": "^6.1.15",
     "@radix-ui/react-avatar": "^1.1.1",
     "@radix-ui/react-dialog": "^1.1.2",
@@ -30,6 +30,7 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "cmdk": "^1.0.0",
+    "dayjs": "^1.11.13",
     "lucide-react": "^0.453.0",
     "next": "14.2.3",
     "next-themes": "^0.3.0",
@@ -43,6 +44,7 @@
   "devDependencies": {
     "@babel/core": "^7.14.5",
     "@babel/preset-react": "^7.14.5",
+    "@next/bundle-analyzer": "^14.2.15",
     "@nx/eslint": "19.6.6",
     "@nx/eslint-plugin": "19.6.6",
     "@nx/jest": "19.6.6",

@@ -16,12 +16,10 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./*"],
+      "@inbaz3/domain-model": ["libs/frontend/domain-model/src/index.ts"],
       "@inbaz3/primitives": ["libs/frontend/primitives/src/index.ts"],
       "@inbaz3/utils": ["libs/frontend/utils/src/index.ts"]
     }
-    // "declaration": true,
-    // "composite": true,
-    // "emitDeclarationOnly": true
   },
   "exclude": ["node_modules", "tmp"]
 }

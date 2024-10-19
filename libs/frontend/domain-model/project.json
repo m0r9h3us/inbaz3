@@ -1,0 +1,11 @@
+{
+  "name": "domain-model",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/frontend/domain-model/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project primitives --web",
+  "targets": {
+    "tsc-lib": {}
+  }
+}
