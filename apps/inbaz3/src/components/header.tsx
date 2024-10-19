@@ -6,7 +6,7 @@ import { UserNav } from './user-nav'
 
 export const Header = () => {
     return (
-        <div className="flex h-16 items-center px-4 justify-between flex-1 border-b">
+        <div className="flex h-16 items-center justify-between border-b">
             <div className="flex gap-8 md:gap-16 ">
                 <HeaderLogo />
                 <HeaderNavigation />

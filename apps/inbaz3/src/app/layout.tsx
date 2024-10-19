@@ -32,9 +32,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     enableSystem
                     disableTransitionOnChange
                 >
-                    <div className="max-w-[100rem] mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="flex flex-col min-h-screen max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <Header />
-                        {children}
+                        <div className="flex-1 flex flex-col">{children}</div>
+                        <footer className="py-4 border-t text-center">
+                            <p>Footer infos</p>
+                        </footer>
                     </div>
                 </ThemeProvider>
             </body>
