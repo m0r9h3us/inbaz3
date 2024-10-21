@@ -1,14 +1,18 @@
 import React from 'react'
 import { Card, CardHeader, CardFooter, CardContent, Button } from '@inbaz3/primitives'
+import dayjs from 'dayjs'
 
-interface EventCardProps {
+export type EventCardProps = {
     title: string
-    date: string
-    location: string
+    start: dayjs.Dayjs
+    end: dayjs.Dayjs
+    city: string
+    country: string
     description: string
 }
 
-const EventCard: React.FC<EventCardProps> = ({ title, date, location, description }) => {
+export const EventCard: React.FC<EventCardProps> = (props: EventCardProps) => {
+    const { title, start, end, city, country, description } = props
     return (
         <Card>
             <CardHeader>
@@ -16,10 +20,13 @@ const EventCard: React.FC<EventCardProps> = ({ title, date, location, descriptio
             </CardHeader>
             <CardContent>
                 <p>
-                    <strong>Date:</strong> {date}
+                    <strong>Start:</strong> {start.toString()}
                 </p>
                 <p>
-                    <strong>Location:</strong> {location}
+                    <strong>End:</strong> {end.toString()}
+                </p>
+                <p>
+                    <strong>Location:</strong> {city}, {country}
                 </p>
                 <p>{description}</p>
             </CardContent>
@@ -29,5 +36,3 @@ const EventCard: React.FC<EventCardProps> = ({ title, date, location, descriptio
         </Card>
     )
 }
-
-export default EventCard

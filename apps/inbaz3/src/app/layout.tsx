@@ -10,6 +10,7 @@ import { Header } from '../components/header'
 const fontSans = FontSans({
     subsets: ['latin'],
     variable: '--font-sans',
+    preload: true,
 })
 
 export const metadata = {
