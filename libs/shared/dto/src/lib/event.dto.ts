@@ -1,4 +1,4 @@
-import { AddressModel } from './address.model'
+import { AddressModel } from './address.dto'
 
 export type EventDto = {
     id: string
