@@ -1,7 +1,7 @@
 {
   "name": "dto",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/frontend/dto/src",
+  "sourceRoot": "libs/shared/dto/src",
   "projectType": "library",
   "tags": [],
   "// targets": "to see all targets run: nx show project primitives --web",
