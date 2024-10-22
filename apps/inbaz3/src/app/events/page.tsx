@@ -1,5 +1,5 @@
-import { EventCardCollection } from '../../components/event-card-collection'
-import { EventCard, EventCardProps } from '../../components/event-card'
+import { EventCardCollection } from '../../components/event-card'
+import { EventCardProps } from '../../components/event-card'
 import { EventDto } from '@inbaz3/dto'
 
 import dayjs from 'dayjs'
@@ -18,20 +18,5 @@ export default async function Events() {
         description: event.description,
     }))
 
-    const renderEventCards = events.map((event) => {
-        return (
-            <li key={event.id}>
-                <EventCard
-                    title={event.title}
-                    start={event.start}
-                    end={event.end}
-                    city={event.city}
-                    country={event.country}
-                    description={event.description}
-                />
-            </li>
-        )
-    })
-
-    return <EventCardCollection>{renderEventCards}</EventCardCollection>
+    return <EventCardCollection events={events} />
 }
