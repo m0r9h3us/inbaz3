@@ -1,7 +1,7 @@
 import dayjs from 'dayjs'
 
-import Calendar from '../../components/calendar'
-import { EventModel } from '@inbaz3/domain-model'
+import Calendar from '../../components/calendar/calendar'
+import { EventModel } from '@/libs/frontend/view-model/src'
 
 export default function CalendarPage() {
     const events: Array<EventModel> = [

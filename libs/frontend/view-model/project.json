@@ -1,7 +1,7 @@
 {
-  "name": "domain-model",
+  "name": "view-model",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/frontend/domain-model/src",
+  "sourceRoot": "libs/frontend/view-model/src",
   "projectType": "library",
   "tags": [],
   "// targets": "to see all targets run: nx show project primitives --web",

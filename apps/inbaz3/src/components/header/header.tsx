@@ -1,7 +1,7 @@
 import { HeaderLogo } from './header-logo'
 import { HeaderNavigation } from './header-navigation'
-import { ModeToggle } from './mode-toggle'
-import { Search } from './search'
+import { ThemeToggle } from '../theme/theme-toggle'
+import { Search } from '../search/search'
 import { UserNav } from './user-nav'
 
 export const Header = () => {
@@ -14,7 +14,7 @@ export const Header = () => {
 
             <div className="flex gap-4 items-center">
                 <Search />
-                <ModeToggle />
+                <ThemeToggle />
                 <UserNav />
             </div>
         </div>

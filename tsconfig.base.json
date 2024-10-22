@@ -16,7 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./*"],
-      "@inbaz3/domain-model": ["libs/frontend/domain-model/src/index.ts"],
+      "@inbaz3/domain-model": ["libs/frontend/view-model/src/index.ts"],
       "@inbaz3/dto": ["libs/shared/dto/src/index.ts"],
       "@inbaz3/primitives": ["libs/frontend/primitives/src/index.ts"],
       "@inbaz3/utils": ["libs/frontend/utils/src/index.ts"]

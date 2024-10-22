@@ -1,4 +1,4 @@
-import JugglingIcon from './juggling-icon'
+import JugglingIcon from '../../icons/juggling-icon'
 
 export const HeaderLogo = () => {
     return (

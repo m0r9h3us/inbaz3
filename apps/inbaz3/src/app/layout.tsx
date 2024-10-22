@@ -1,11 +1,13 @@
 import { Inter as FontSans } from 'next/font/google'
 import { cn } from '@inbaz3/utils'
 
-import { ThemeProvider } from '../components/theme-provider'
+import { ThemeProvider } from '../components/theme/theme-provider'
 
 import './global.css'
 
-import { Header } from '../components/header'
+import { Header } from '../components/header/header'
+import { Suspense } from 'react'
+import Loading from './loading'
 
 const fontSans = FontSans({
     subsets: ['latin'],
@@ -25,17 +27,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 className={cn(
                     'min-h-screen bg-background font-sans antialiased',
                     fontSans.variable,
-                )}
-            >
+                )}>
                 <ThemeProvider
                     attribute="class"
                     defaultTheme="system"
                     enableSystem
-                    disableTransitionOnChange
-                >
+                    disableTransitionOnChange>
                     <div className="flex flex-col min-h-screen max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <Header />
-                        <div className="flex-1 flex flex-col">{children}</div>
+                        <div className="flex-1 flex flex-col">
+                            <Suspense fallback={<Loading />}>{children}</Suspense>
+                        </div>
+
                         <footer className="py-4 border-t text-center">
                             <p>Footer infos</p>
                         </footer>

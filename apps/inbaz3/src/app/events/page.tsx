@@ -1,5 +1,5 @@
-import { EventCardCollection } from '../../components/event-card'
-import { EventCardProps } from '../../components/event-card'
+import { EventCardCollection } from '../../components/event-card/event-card-collection'
+import { EventCardProps } from '../../components/event-card/event-card'
 import { EventDto } from '@inbaz3/dto'
 
 import dayjs from 'dayjs'
