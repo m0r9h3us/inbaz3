@@ -12,7 +12,6 @@ import Loading from './loading'
 const fontSans = FontSans({
     subsets: ['latin'],
     variable: '--font-sans',
-    preload: true,
 })
 
 export const metadata = {

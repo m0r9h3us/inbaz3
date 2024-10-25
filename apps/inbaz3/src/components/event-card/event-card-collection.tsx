@@ -11,7 +11,7 @@ export const EventCardCollection = (props: EventCardCollectionProps) => {
     const renderEventCards = () =>
         events.map((event) => {
             return (
-                <li key={event.id}>
+                <li key={event.id} className="flex-grow">
                     <EventCard
                         title={event.title}
                         start={event.start}
@@ -19,10 +19,18 @@ export const EventCardCollection = (props: EventCardCollectionProps) => {
                         city={event.city}
                         country={event.country}
                         description={event.description}
+                        priceRange="40-50 €"
+                        foodIncluded={true}
                     />
                 </li>
             )
         })
 
-    return <ul className="flex flex-col gap-4 p-4">{renderEventCards()}</ul>
+    return (
+        <>
+            <ul className="flex flex-wrap gap-4 md:grid md:grid-cols-2 lg:grid-cols-3">
+                {renderEventCards()}
+            </ul>
+        </>
+    )
 }
