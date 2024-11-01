@@ -1,5 +1,5 @@
-import { ReactNode } from 'react'
-import Link from 'next/link'
+import { ReactNode } from 'react';
+import Link from 'next/link';
 
 export const HeaderNavigation = (): ReactNode => {
     return (
@@ -17,5 +17,5 @@ export const HeaderNavigation = (): ReactNode => {
                 <span className="text">Kalendar</span>
             </Link>
         </nav>
-    )
-}
+    );
+};

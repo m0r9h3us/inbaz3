@@ -1,10 +1,10 @@
 {
   "singleQuote": true,
-  "semi": false,
-  "trailingComma": "all",
+  "semi": true,
+  "trailingComma": "none",
   "tabWidth": 4,
   "printWidth": 100,
-  "jsxBracketSameLine": true,
+  "jsxBracketSameLine": false,
   "overrides": [
     {
       "files": [

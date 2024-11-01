@@ -1,39 +1,38 @@
-import React from 'react'
+import React from 'react';
 import {
     Card,
     CardHeader,
     CardTitle,
-    CardDescription,
     CardFooter,
     CardContent,
     Button,
-    Separator,
-} from '@inbaz3/primitives'
-import dayjs from 'dayjs'
+    Separator
+} from '@inbaz3/primitives';
+import dayjs from 'dayjs';
 
-import { CalendarIcon, MapPinIcon, FlameIcon } from 'lucide-react'
-import { JugglingClubIcon } from '../../icons/juggling-clubs'
-import { AcroIcon } from '../../icons/acro-icon'
+import { CalendarIcon, MapPinIcon, FlameIcon } from 'lucide-react';
+import { JugglingClubIcon } from '../../icons/juggling-clubs';
+import { AcroIcon } from '../../icons/acro-icon';
 
 export type EventCardProps = {
-    title: string
-    start: dayjs.Dayjs
-    end: dayjs.Dayjs
-    city: string
-    country: string
-    description: string
-    priceRange?: string // Optional price range
-    foodIncluded?: boolean // Optional food inclusion flag
-}
+    title: string;
+    start: dayjs.Dayjs;
+    end: dayjs.Dayjs;
+    city: string;
+    country: string;
+    description: string;
+    priceRange?: string; // Optional price range
+    foodIncluded?: boolean; // Optional food inclusion flag
+};
 
 export const EventCard = (props: EventCardProps) => {
-    const { title, start, end, city, description, priceRange, foodIncluded } = props
+    const { title, start, end, city, priceRange, foodIncluded } = props;
     const activityIcons = {
         acrobatics: <AcroIcon className="w-5 h-5 fill-primary-foreground" />,
         fireSpace: <FlameIcon className="w-5 h-5" />,
-        juggling: <JugglingClubIcon className="w-5 h-5" />,
-    }
-    type ActivityType = 'acrobatics' | 'fireSpace' | 'juggling'
+        juggling: <JugglingClubIcon className="w-5 h-5" />
+    };
+    type ActivityType = 'acrobatics' | 'fireSpace' | 'juggling';
 
     const renderActivityIcons = (activities: ActivityType[]) => {
         return activities.map((activity, index) => (
@@ -41,9 +40,10 @@ export const EventCard = (props: EventCardProps) => {
                 {activityIcons[activity]}
                 <span className="text-sm">{activity}</span>
             </span>
-        ))
-    }
-    const eventDuration = end.diff(start, 'day') + 1
+        ));
+    };
+    const eventDuration = end.diff(start, 'day') + 1;
+    const eventDateString = `${start.format('DD/MM/YYYY')} - ${end.format('DD/MM/YYYY')}`;
     return (
         <Card className="flex flex-1 flex-col min-w-60 max-w-120 h-[26rem]">
             <CardHeader className="flex flex-col gap-2">
@@ -51,8 +51,8 @@ export const EventCard = (props: EventCardProps) => {
                 <Separator />
                 <div className="flex gap-4 items-center text-sm">
                     <CalendarIcon className="h-4 w-4" />
-                    <span>{`${start.format('DD/MM/YYYY')} - ${end.format('DD/MM/YYYY')}`}</span>
-                    <span className="bg-blue-100 text-blue-800 text-xs font-semibold ml-2 px-2.5 py-0.5 rounded">
+                    <span>{eventDateString}</span>
+                    <span className="bg-blue-100 text-blue-800 text-xs font-semibold ml-2 px-2.5 py-0.5 rounded text-nowrap">
                         {eventDuration} {eventDuration > 1 ? 'days' : 'day'}
                     </span>
                 </div>
@@ -61,14 +61,16 @@ export const EventCard = (props: EventCardProps) => {
                     <span>{city}</span>
                 </div>
                 <Separator />
-                <div className="flex flex-wrap gap-4 px-4">
-                    {renderActivityIcons(['acrobatics', 'fireSpace', 'juggling'])}
-                </div>
-                <Separator />
             </CardHeader>
 
-            <CardContent className="flex-1 overflow-y-hidden">
-                <CardDescription className="pt-2">{description}</CardDescription>
+            <CardContent className="flex flex-col flex-1 gap-2 overflow-hidden items-start justify-center">
+                <div className="flex flex-col max-h-36 flex-wrap gap-4 p-2">
+                    {renderActivityIcons(['acrobatics', 'fireSpace', 'juggling'])}
+                    {title === 'München Con 2024'
+                        ? renderActivityIcons(['acrobatics', 'fireSpace', 'juggling'])
+                        : null}
+                </div>
+                {/* <CardDescription className="pt-2">{description}</CardDescription> */}
             </CardContent>
             <Separator />
             <CardFooter className="flex justify-between pt-4">
@@ -89,5 +91,5 @@ export const EventCard = (props: EventCardProps) => {
                 <Button variant="outline">Learn More</Button>
             </CardFooter>
         </Card>
-    )
-}
+    );
+};

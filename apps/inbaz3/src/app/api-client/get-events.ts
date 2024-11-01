@@ -1,8 +1,7 @@
-import { EventDto } from '@inbaz3/dto'
+import { EventDto } from '@inbaz3/dto';
+import { testEvents } from '../api/events/_test-data/events';
 
 export const getEvents = async () => {
-    const baseUrl = 'http://localhost:3000'
-    const response = await fetch(baseUrl + '/api/events')
-    const responseData: { data: Array<EventDto> } = await response.json()
-    return responseData.data
-}
+    const responseData: { data: Array<EventDto> } = { data: testEvents };
+    return responseData.data;
+};
