@@ -8,7 +8,9 @@
     "serve": {
       "executor": "@nx/js:node",
       "defaultConfiguration": "development",
-      "dependsOn": ["build"],
+      "dependsOn": [
+        "build"
+      ],
       "options": {
         "buildTarget": "api-gateway:build",
         "runBuildTargetDependencies": false
@@ -20,6 +22,13 @@
         "production": {
           "buildTarget": "api-gateway:build:production"
         }
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "options": {
+        "jestConfig": "apps/backend/api-gateway/jest.config.ts",
+        "passWithNoTests": true
       }
     }
   }

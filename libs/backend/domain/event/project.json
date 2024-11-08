@@ -1,0 +1,11 @@
+{
+  "name": "event",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/backend/domain/event/src",
+  "projectType": "library",
+  "tags": [
+    "backend"
+  ],
+  "// targets": "to see all targets run: nx show project event --web",
+  "targets": {}
+}
