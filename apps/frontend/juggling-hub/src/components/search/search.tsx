@@ -1,4 +1,4 @@
-import { Input } from '@inbaz3/primitives'
+import { Input } from '@juggling-hub/primitives';
 
 export function Search() {
     return (
@@ -7,5 +7,5 @@ export function Search() {
             placeholder="Search..."
             className="hidden md:block md:w-[100px] lg:w-[300px]"
         />
-    )
+    );
 }

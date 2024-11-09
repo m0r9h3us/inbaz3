@@ -23,8 +23,8 @@
     "**/*.tsx",
     "**/*.js",
     "**/*.jsx",
-    "../../../apps/inbaz3/.next/types/**/*.ts",
-    "../../../dist/apps/inbaz3/.next/types/**/*.ts",
+    "../../../apps/juggling-hub/.next/types/**/*.ts",
+    "../../../dist/apps/juggling-hub/.next/types/**/*.ts",
     "next-env.d.ts",
     ".next/types/**/*.ts"
   ],

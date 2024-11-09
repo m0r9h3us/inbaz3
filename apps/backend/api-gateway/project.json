@@ -1,5 +1,5 @@
 {
-  "name": "api-gateway",
+  "name": "backend-api-gateway",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/backend/api-gateway/src",
   "projectType": "application",
@@ -12,22 +12,22 @@
         "build"
       ],
       "options": {
-        "buildTarget": "api-gateway:build",
+        "buildTarget": "backend-api-gateway:build",
         "runBuildTargetDependencies": false
       },
       "configurations": {
         "development": {
-          "buildTarget": "api-gateway:build:development"
+          "buildTarget": "backend-api-gateway:build:development"
         },
         "production": {
-          "buildTarget": "api-gateway:build:production"
+          "buildTarget": "backend-api-gateway:build:production"
         }
       }
     },
     "test": {
       "executor": "@nx/jest:jest",
       "options": {
-        "jestConfig": "apps/backend/api-gateway/jest.config.ts",
+        "jestConfig": "apps/backend/backend-api-gateway/jest.config.ts",
         "passWithNoTests": true
       }
     }

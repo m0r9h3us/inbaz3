@@ -3,7 +3,7 @@ import { EventCardProps } from '../../components/event-card/event-card';
 
 import dayjs from 'dayjs';
 import { getEvents } from '../api-client/get-events';
-import { Separator, Switch } from '@inbaz3/primitives';
+import { Separator, Switch } from '@juggling-hub/primitives';
 
 export default async function Events() {
     const eventData = await getEvents();

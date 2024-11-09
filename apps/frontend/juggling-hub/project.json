@@ -1,10 +1,10 @@
 {
-  "name": "inbaz3",
+  "name": "frontend-juggling-hub",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/inbaz3",
+  "sourceRoot": "apps/juggling-hub",
   "projectType": "application",
   "tags": [],
-  "// targets": "to see all targets run: nx show project inbaz3 --web",
+  "// targets": "to see all targets run: nx show project juggling-hub --web",
   "targets": {
     "tsc-app": {}
   }

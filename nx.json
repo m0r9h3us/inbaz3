@@ -35,9 +35,7 @@
       "options": {
         "targetName": "test"
       },
-      "exclude": [
-        "apps/backend/api-gateway-e2e/**/*"
-      ]
+      "exclude": []
     },
     {
       "plugin": "@nx/eslint/plugin",

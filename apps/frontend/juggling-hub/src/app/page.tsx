@@ -1,5 +1,5 @@
-import { Button } from '@inbaz3/primitives'
-import Link from 'next/link'
+import { Button } from '@juggling-hub/primitives';
+import Link from 'next/link';
 
 export default function Index() {
     return (
@@ -20,5 +20,5 @@ export default function Index() {
                 </Link>
             </div>
         </div>
-    )
+    );
 }
