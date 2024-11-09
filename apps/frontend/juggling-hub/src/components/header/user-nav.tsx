@@ -11,7 +11,7 @@ import {
     DropdownMenuSeparator,
     DropdownMenuShortcut,
     DropdownMenuTrigger
-} from '@juggling-hub/primitives';
+} from '@juggling-hub/frontend/primitives';
 
 export function UserNav() {
     return (

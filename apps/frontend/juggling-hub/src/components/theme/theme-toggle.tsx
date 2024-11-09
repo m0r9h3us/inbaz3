@@ -10,7 +10,7 @@ import {
     DropdownMenuContent,
     DropdownMenuItem,
     DropdownMenuTrigger
-} from '@juggling-hub/primitives';
+} from '@juggling-hub/frontend/primitives';
 
 export function ThemeToggle() {
     const { setTheme } = useTheme();

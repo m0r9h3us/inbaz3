@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { cn } from '@juggling-hub/utils';
+import { cn } from '@juggling-hub/frontend/utils';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {}

@@ -1,5 +1,5 @@
 import { Inter as FontSans } from 'next/font/google';
-import { cn } from '@juggling-hub/utils';
+import { cn } from '@juggling-hub/frontend/utils';
 
 import { ThemeProvider } from '../components/theme/theme-provider';
 

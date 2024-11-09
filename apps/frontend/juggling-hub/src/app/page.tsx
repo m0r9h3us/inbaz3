@@ -1,4 +1,4 @@
-import { Button } from '@juggling-hub/primitives';
+import { Button } from '@juggling-hub/frontend/primitives';
 import Link from 'next/link';
 
 export default function Index() {

@@ -7,7 +7,7 @@ import {
     CardContent,
     Button,
     Separator
-} from '@juggling-hub/primitives';
+} from '@juggling-hub/frontend/primitives';
 import dayjs from 'dayjs';
 
 import { CalendarIcon, MapPinIcon, FlameIcon } from 'lucide-react';

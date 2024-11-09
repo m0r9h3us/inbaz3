@@ -16,11 +16,11 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./*"],
-      "@juggling-hub/domain-model": ["libs/frontend/view-model/src/index.ts"],
-      "@juggling-hub/dto": ["libs/shared/dto/src/index.ts"],
+      "@juggling-hub/frontend/view-model": ["libs/frontend/view-model/src/index.ts"],
+      "@juggling-hub/shared/dto": ["libs/shared/dto/src/index.ts"],
       "@juggling-hub/backend/event": ["libs/backend/domain/event/src/index.ts"],
-      "@juggling-hub/primitives": ["libs/frontend/primitives/src/index.ts"],
-      "@juggling-hub/utils": ["libs/frontend/utils/src/index.ts"]
+      "@juggling-hub/frontend/primitives": ["libs/frontend/primitives/src/index.ts"],
+      "@juggling-hub/frontend/utils": ["libs/frontend/utils/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

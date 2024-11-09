@@ -1,4 +1,4 @@
-import { EventDto } from '@juggling-hub/dto';
+import { EventDto } from '@juggling-hub/shared/dto';
 import { testEvents } from '../api/events/_test-data/events';
 
 export const getEvents = async () => {

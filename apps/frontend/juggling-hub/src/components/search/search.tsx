@@ -1,4 +1,4 @@
-import { Input } from '@juggling-hub/primitives';
+import { Input } from '@juggling-hub/frontend/primitives';
 
 export function Search() {
     return (
