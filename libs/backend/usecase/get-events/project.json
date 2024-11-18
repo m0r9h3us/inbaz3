@@ -1,7 +1,7 @@
 {
-  "name": "event",
+  "name": "libs-backend-usecase-get-events",
   "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/backend/domain/event/src",
+  "sourceRoot": "libs/backend/usecase/get-events/src",
   "projectType": "library",
   "tags": [
     "backend"
