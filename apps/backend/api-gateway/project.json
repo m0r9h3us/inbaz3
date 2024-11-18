@@ -27,7 +27,7 @@
     "test": {
       "executor": "@nx/jest:jest",
       "options": {
-        "jestConfig": "apps/backend/backend-api-gateway/jest.config.ts",
+        "jestConfig": "apps/backend/api-gateway/jest.config.ts",
         "passWithNoTests": true
       }
     }
