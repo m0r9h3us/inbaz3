@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
 
-import { EventModule } from '@juggling-hub/backend/event';
+import { GetEventsModule } from '@juggling-hub/libs-backend-domain-event';
 
 @Module({
-    imports: [EventModule],
+    imports: [GetEventsModule],
     controllers: [],
     providers: []
 })

@@ -6,5 +6,5 @@ export default {
         '^.+\\.[tj]s$': ['ts-jest', { tsconfig: '<rootDir>/tsconfig.spec.json' }]
     },
     moduleFileExtensions: ['ts', 'js', 'html'],
-    coverageDirectory: '../../../../coverage/libs/backend/usecase/get-events'
+    coverageDirectory: '../../../../coverage/libs/backend/domain/event'
 };

@@ -1,4 +1,4 @@
-import { EventDto } from '@juggling-hub/shared/dto';
+import { EventDto } from '@juggling-hub/libs-shared-event-dto';
 
 import { testEvents } from './_test-data/events';
 
