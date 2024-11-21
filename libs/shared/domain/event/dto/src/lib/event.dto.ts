@@ -1,6 +1,6 @@
 import { AddressModel } from './address.dto';
 
-export type EventDto = {
+export interface EventDto {
     id: string;
     title: string;
     start: string;
@@ -8,4 +8,4 @@ export type EventDto = {
     location: AddressModel;
     description: string;
     websites: Array<string>;
-};
+}

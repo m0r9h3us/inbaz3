@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./*"],
+      "@juggling-hub/shared/domain/event/data": ["libs/shared/domain/event/data/src/index.ts"],
       "@juggling-hub/frontend/primitives": ["libs/frontend/primitives/src/index.ts"],
       "@juggling-hub/frontend/utils": ["libs/frontend/utils/src/index.ts"],
       "@juggling-hub/frontend/view-model": ["libs/frontend/view-model/src/index.ts"],
@@ -23,5 +24,6 @@
       "@juggling-hub/libs-shared-event-dto": ["libs/shared/domain/event/dto/src/index.ts"]
     }
   },
+  "files": ["global.d.ts"],
   "exclude": ["node_modules", "tmp"]
 }
