@@ -1,5 +1,5 @@
 {
-  "name": "utils",
+  "name": "libs-frontend-utils",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/frontend/utils/src",
   "projectType": "library",

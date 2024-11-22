@@ -1,4 +1,3 @@
-import React from 'react';
 import {
     Card,
     CardHeader,
@@ -11,14 +10,13 @@ import {
 import dayjs from 'dayjs';
 
 import { CalendarIcon, MapPinIcon, FlameIcon } from 'lucide-react';
-import { JugglingClubIcon } from '../../icons/juggling-clubs';
-import { AcroIcon } from '../../icons/acro-icon';
+import { AcroIcon, JugglingClubIcon } from '@/libs/frontend/icons/src';
 
 export type EventCardProps = {
     title: string;
     start: dayjs.Dayjs;
     end: dayjs.Dayjs;
-    city: string;
+    city?: string;
     country: string;
     description: string;
     priceRange?: string; // Optional price range

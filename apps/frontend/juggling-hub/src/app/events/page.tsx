@@ -1,12 +1,12 @@
-import { EventCardCollection } from '../../components/event-card/event-card-collection';
-import { EventCardProps } from '../../components/event-card/event-card';
-
 import dayjs from 'dayjs';
-import { getEvents } from '../api-client/get-events';
+
 import { Separator, Switch } from '@juggling-hub/frontend/primitives';
+import { EventCardProps } from '@/libs/frontend/domain/event/components/src';
+import { getMockEvents } from '@juggling-hub/frontend/domain/event/api-client';
+import { EventCardCollection } from '@juggling-hub/frontend/domain/event/components';
 
 export default async function Events() {
-    const eventData = await getEvents();
+    const eventData = getMockEvents();
 
     const events: Array<{ id: string } & EventCardProps> = eventData.map((event) => ({
         id: event.id,

@@ -1,7 +1,7 @@
 {
-  "name": "libs-frontend-primitives",
+  "name": "libs-frontend-icons",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/frontend/primitives/src",
+  "sourceRoot": "libs/frontend/icons/src",
   "projectType": "library",
   "tags": [],
   "// targets": "to see all targets run: nx show project primitives --web",
