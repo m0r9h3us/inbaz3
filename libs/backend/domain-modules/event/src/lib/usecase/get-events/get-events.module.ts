@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { GetEventsController } from './get-events.controller';
 import { GetEventsService } from './get-events.service';
-import { JugglingEdgeApiIntegrationModule } from '../../infra/juggling-hub-integration/juggling-edge-api-integration.module';
+import { JugglingEdgeApiIntegrationModule } from '@juggling-hub/backend/external/juggling-edge-api';
 import { GET_EVENTS_SERVICE } from './get-events.module.di';
 
 @Module({

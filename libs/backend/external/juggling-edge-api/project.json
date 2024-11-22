@@ -1,0 +1,9 @@
+{
+  "name": "juggling-edge-api",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/backend/external/juggling-edge-api/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project juggling-edge-api --web",
+  "targets": {}
+}

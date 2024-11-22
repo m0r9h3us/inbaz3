@@ -12,7 +12,7 @@ export const getMockEvents = () => {
         id: event.eventID.toString(),
         title: event.fullTitle,
         start: dayjs(event.startDate),
-        end: dayjs(event.startDate),
+        end: dayjs(event.startDate).add(event.duration, 'day'),
         location: {
             country: event.country
         },

@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { HttpModule } from '@nestjs/axios';
 import { JugglingEdgeApiIntegrationHttpServiceMock } from './juggling-edge-api-integration.service.mock';
-import { JUGGLING_EDGE_API_INTEGRATION_SERVICE } from './juggling-edge-api-integration.module.di';
+import { JUGGLING_EDGE_API_INTEGRATION_SERVICE } from './juggling-edge-api-integration.module-definition';
 
 @Module({
     imports: [
