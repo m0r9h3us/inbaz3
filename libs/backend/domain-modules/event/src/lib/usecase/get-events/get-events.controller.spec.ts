@@ -1,8 +1,8 @@
 import { TestBed } from '@suites/unit';
 import type { Mocked } from '@suites/unit';
 import { GetEventsController } from './get-events.controller';
-import { GET_EVENTS_SERVICE } from './get-events.module';
 import { GetEventsService } from './get-events.service';
+import { GET_EVENTS_SERVICE } from './get-events.module.di';
 
 describe('EventController', () => {
     let controller: GetEventsController;

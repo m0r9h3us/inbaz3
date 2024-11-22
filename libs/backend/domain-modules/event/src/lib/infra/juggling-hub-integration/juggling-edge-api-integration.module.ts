@@ -1,10 +1,7 @@
 import { Module } from '@nestjs/common';
 import { HttpModule } from '@nestjs/axios';
 import { JugglingEdgeApiIntegrationHttpServiceMock } from './juggling-edge-api-integration.service.mock';
-
-export const JUGGLING_EDGE_API_INTEGRATION_SERVICE = Symbol(
-    'JUGGLING_EDGE_API_INTEGRATION_SERVICE'
-);
+import { JUGGLING_EDGE_API_INTEGRATION_SERVICE } from './juggling-edge-api-integration.module.di';
 
 @Module({
     imports: [
@@ -21,6 +18,6 @@ export const JUGGLING_EDGE_API_INTEGRATION_SERVICE = Symbol(
             useClass: JugglingEdgeApiIntegrationHttpServiceMock
         }
     ],
-    exports: []
+    exports: [JUGGLING_EDGE_API_INTEGRATION_SERVICE]
 })
 export class JugglingEdgeApiIntegrationModule {}

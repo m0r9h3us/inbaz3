@@ -1,4 +1,4 @@
-import { Exclude, Transform } from 'class-transformer';
+import { Exclude, Expose, Transform, Type } from 'class-transformer';
 import {
     IsInt,
     IsString,
@@ -6,7 +6,9 @@ import {
     IsLatitude,
     IsLongitude,
     IsDateString,
-    IsOptional
+    IsOptional,
+    IsArray,
+    ValidateNested
 } from 'class-validator';
 
 export interface JugglingEdgeEvent {
@@ -21,7 +23,7 @@ export interface JugglingEdgeEvent {
     duration: number;
     startTime: string;
     endTime: string;
-    url: string;
+    urls: Array<string>;
     country: string;
     lat: number;
     lng: number;
@@ -31,79 +33,92 @@ export interface JugglingEdgeEvent {
 }
 
 // this dto is not ment to be send to the frontend
+
 @Exclude()
 export class JugglingEdgeEventDto implements JugglingEdgeEvent {
-    @Transform(({ obj }) => obj.EdgeListing, { toClassOnly: true })
+    @Expose({ name: 'EdgeListing' })
     @IsUrl()
     edgeListing!: string;
 
-    @Transform(({ obj }) => obj.EventID, { toClassOnly: true })
+    @Expose({ name: 'EventID' })
     @IsInt()
     eventID!: number;
 
-    @Transform(({ obj }) => obj.FullTitle, { toClassOnly: true })
+    @Expose({ name: 'FullTitle' })
     @IsString()
     fullTitle!: string;
 
-    @Transform(({ obj }) => obj.ShortTitle, { toClassOnly: true })
+    @Expose({ name: 'ShortTitle' })
     @IsString()
     shortTitle!: string;
 
-    @Transform(({ obj }) => obj.Tag, { toClassOnly: true })
+    @Expose({ name: 'Tag' })
     @IsString()
     tag!: string;
 
-    @Transform(({ obj }) => obj.Blurb, { toClassOnly: true })
+    @Expose({ name: 'Blurb' })
     @IsString()
     blurb!: string;
 
-    @Transform(({ obj }) => obj.Address, { toClassOnly: true })
+    @Expose({ name: 'Address' })
     @IsString()
     address!: string;
 
-    @Transform(({ obj }) => obj.StartDate, { toClassOnly: true })
+    @Expose({ name: 'StartDate' })
     @IsDateString()
     startDate!: string;
 
-    @Transform(({ obj }) => obj.Duration, { toClassOnly: true })
+    @Expose({ name: 'Duration' })
     @IsInt()
     duration!: number;
 
-    @Transform(({ obj }) => obj.StartTime, { toClassOnly: true })
+    @Expose({ name: 'StartTime' })
     @IsOptional()
     @IsString()
     startTime!: string;
 
-    @Transform(({ obj }) => obj.EndTime, { toClassOnly: true })
+    @Expose({ name: 'EndTime' })
     @IsOptional()
     @IsString()
     endTime!: string;
 
-    @Transform(({ obj }) => obj.URL, { toClassOnly: true })
-    @IsString()
-    url!: string;
+    @Expose({ name: 'URL' })
+    @Transform(({ value }) => value.split('\n'))
+    @IsArray()
+    urls!: Array<string>;
 
-    @Transform(({ obj }) => obj.Country, { toClassOnly: true })
+    @Expose({ name: 'Country' })
     @IsString()
     country!: string;
 
-    @Transform(({ obj }) => obj.Lat, { toClassOnly: true })
+    @Expose({ name: 'Lat' })
     @IsLatitude()
     lat!: number;
 
-    @Transform(({ obj }) => obj.Lng, { toClassOnly: true })
+    @Expose({ name: 'Lng' })
     @IsLongitude()
     lng!: number;
 
-    @Transform(({ obj }) => obj.LastEdit, { toClassOnly: true })
+    @Expose({ name: 'LastEdit' })
     @IsDateString()
     lastEdit!: string;
 
-    @Transform(({ obj }) => obj.Status, { toClassOnly: true })
+    @Expose({ name: 'Status' })
     @IsInt()
     status!: number;
 
-    @Transform(({ obj }) => obj.Cancelled, { toClassOnly: true })
+    @Expose({ name: 'Cancelled' })
     @IsInt()
     cancelled!: number;
+}
+
+export class JugglingEdgeEventCollectionDto {
+    @IsArray()
+    @ValidateNested({ each: true })
+    @Type(() => JugglingEdgeEventDto)
+    events!: JugglingEdgeEventDto[];
+
+    constructor(events: JugglingEdgeEventDto[]) {
+        this.events = events;
+    }
 }

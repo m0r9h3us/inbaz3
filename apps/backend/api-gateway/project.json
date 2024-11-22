@@ -5,6 +5,7 @@
   "projectType": "application",
   "tags": [],
   "targets": {
+    "tsc-app": {},
     "serve": {
       "executor": "@nx/js:node",
       "defaultConfiguration": "development",

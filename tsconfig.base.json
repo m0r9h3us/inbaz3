@@ -20,8 +20,8 @@
       "@juggling-hub/frontend/primitives": ["libs/frontend/primitives/src/index.ts"],
       "@juggling-hub/frontend/utils": ["libs/frontend/utils/src/index.ts"],
       "@juggling-hub/frontend/view-model": ["libs/frontend/view-model/src/index.ts"],
-      "@juggling-hub/libs-backend-domain-event": ["libs/backend/domain/event/src/index.ts"],
-      "@juggling-hub/libs-shared-event-dto": ["libs/shared/domain/event/dto/src/index.ts"]
+      "@juggling-hub/libs-backend-domain-event": ["libs/backend/domain-modules/event/src/index.ts"],
+      "@juggling-hub/libs-shared-event-dto": ["libs/shared/domain-modules/event/dto/src/index.ts"]
     }
   },
   "files": ["global.d.ts"],
