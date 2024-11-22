@@ -31,6 +31,19 @@
         "jestConfig": "apps/backend/api-gateway/jest.config.ts",
         "passWithNoTests": true
       }
+    },
+    "build": {
+      "options": {
+        "transformers": [
+          {
+            "name": "@nestjs/swagger/plugin",
+            "options": {
+              "classValidatorShim": true,
+              "introspectComments": true
+            }
+          }
+        ]
+      }
     }
   }
 }
