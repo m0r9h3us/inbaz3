@@ -1,9 +1,11 @@
 import { Inject, Injectable, Logger } from '@nestjs/common';
-import { JugglingEdgeApiIntegrationServiceInterface } from '../../infra/juggling-hub-integration/juggling-edge-api-integration.service.interface';
 import { GetEventsServiceInterface } from './get-events.service.interface';
 import { LocationDto } from '../../dto/adress.dto';
-import { JUGGLING_EDGE_API_INTEGRATION_SERVICE } from '../../infra/juggling-hub-integration/juggling-edge-api-integration.module.di';
 import { EventDto } from '../../dto/event.dto';
+import {
+    JUGGLING_EDGE_API_INTEGRATION_SERVICE,
+    JugglingEdgeApiIntegrationServiceInterface
+} from '@juggling-hub/backend/external/juggling-edge-api';
 
 @Injectable()
 export class GetEventsService implements GetEventsServiceInterface {

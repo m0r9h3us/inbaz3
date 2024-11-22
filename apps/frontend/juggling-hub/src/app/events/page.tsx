@@ -1,7 +1,7 @@
 import dayjs from 'dayjs';
 
 import { Separator, Switch } from '@juggling-hub/frontend/primitives';
-import { EventCardProps } from '@/libs/frontend/domain/event/components/src';
+import { EventCardProps } from '@juggling-hub/frontend/domain/event/components';
 import { getMockEvents } from '@juggling-hub/frontend/domain/event/api-client';
 import { EventCardCollection } from '@juggling-hub/frontend/domain/event/components';
 

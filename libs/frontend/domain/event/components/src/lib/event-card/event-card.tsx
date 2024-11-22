@@ -10,7 +10,7 @@ import {
 import dayjs from 'dayjs';
 
 import { CalendarIcon, MapPinIcon, FlameIcon } from 'lucide-react';
-import { AcroIcon, JugglingClubIcon } from '@/libs/frontend/icons/src';
+import { AcroIcon, JugglingClubIcon } from '@juggling-hub/frontend/icons';
 
 export type EventCardProps = {
     title: string;
