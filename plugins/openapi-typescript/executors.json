@@ -1,0 +1,9 @@
+{
+    "executors": {
+        "generate-types": {
+            "implementation": "./src/lib/generate-frontend-types/executor",
+            "schema": "./src/lib/generate-frontend-types/schema.json",
+            "description": "generate-types executor"
+        }
+    }
+}

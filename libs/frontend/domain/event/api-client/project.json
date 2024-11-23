@@ -6,6 +6,13 @@
   "tags": [],
   "// targets": "to see all targets run: nx show project primitives --web",
   "targets": {
-    "tsc-lib": {}
+    "tsc-lib": {},
+    "generate-types": {
+      "executor": "@morpheus/openapi-typescript:generate-types",
+      "options": {
+        "schema": "{workspaceRoot}/libs/shared/api-contract/src/lib/swagger-spec.json",
+        "output": "{projectRoot}/src/lib/frontend-api-schema.d.ts"
+      }
+    }
   }
 }

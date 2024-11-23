@@ -1,0 +1,28 @@
+{
+  "name": "api-contract",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/shared/api-contract/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "test": {
+      "options": {
+        "passWithNoTests": true
+      }
+    },
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/libs/shared/api-contract",
+        "main": "libs/shared/api-contract/src/index.ts",
+        "tsConfig": "libs/shared/api-contract/tsconfig.lib.json",
+        "assets": [
+          "libs/shared/api-contract/*.md"
+        ]
+      }
+    }
+  }
+}

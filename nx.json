@@ -97,6 +97,16 @@
         "default",
         "{projectRoot}/tsconfig.base.json"
       ]
+    },
+    "@nx/js:tsc": {
+      "cache": true,
+      "dependsOn": [
+        "^build"
+      ],
+      "inputs": [
+        "production",
+        "^production"
+      ]
     }
   },
   "useLegacyCache": true

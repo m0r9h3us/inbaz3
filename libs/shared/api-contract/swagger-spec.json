@@ -1,0 +1,118 @@
+{
+  "openapi": "3.0.0",
+  "paths": {
+    "/api/events": {
+      "get": {
+        "operationId": "GetEventsController_getEvents",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EventDto"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "GetEvents"
+        ]
+      }
+    }
+  },
+  "info": {
+    "title": "API Documentation",
+    "description": "",
+    "version": "0.1",
+    "contact": {}
+  },
+  "tags": [
+    {
+      "name": "api",
+      "description": ""
+    }
+  ],
+  "servers": [],
+  "components": {
+    "schemas": {
+      "LocationDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "street": {
+            "type": "string"
+          },
+          "houseNumber": {
+            "type": "string"
+          },
+          "zipCode": {
+            "type": "string"
+          },
+          "city": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "latitude": {
+            "type": "number"
+          },
+          "longitude": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "country",
+          "latitude",
+          "longitude"
+        ]
+      },
+      "EventDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "start": {
+            "type": "string"
+          },
+          "end": {
+            "type": "string"
+          },
+          "location": {
+            "$ref": "#/components/schemas/LocationDto"
+          },
+          "description": {
+            "type": "string"
+          },
+          "websites": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "start",
+          "end",
+          "location",
+          "description",
+          "websites"
+        ]
+      }
+    }
+  }
+}

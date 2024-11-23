@@ -1,0 +1,48 @@
+{
+  "name": "openapi-typescript",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "plugins/openapi-typescript/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/plugins/openapi-typescript",
+        "main": "plugins/openapi-typescript/src/index.ts",
+        "tsConfig": "plugins/openapi-typescript/tsconfig.lib.json",
+        "assets": [
+          "plugins/openapi-typescript/*.md",
+          {
+            "input": "./plugins/openapi-typescript/src",
+            "glob": "**/!(*.ts)",
+            "output": "./src"
+          },
+          {
+            "input": "./plugins/openapi-typescript/src",
+            "glob": "**/*.d.ts",
+            "output": "./src"
+          },
+          {
+            "input": "./plugins/openapi-typescript",
+            "glob": "generators.json",
+            "output": "."
+          },
+          {
+            "input": "./plugins/openapi-typescript",
+            "glob": "executors.json",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "test": {
+      "options": {
+        "passWithNoTests": true
+      }
+    }
+  }
+}

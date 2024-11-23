@@ -11,8 +11,10 @@ import dayjs from 'dayjs';
 
 import { CalendarIcon, MapPinIcon, FlameIcon } from 'lucide-react';
 import { AcroIcon, JugglingClubIcon } from '@juggling-hub/frontend/icons';
+import Link from 'next/link';
 
 export type EventCardProps = {
+    id: string;
     title: string;
     start: dayjs.Dayjs;
     end: dayjs.Dayjs;
@@ -86,7 +88,9 @@ export const EventCard = (props: EventCardProps) => {
                         </div>
                     )}
                 </div>
-                <Button variant="outline">Learn More</Button>
+                <Link href={`/event/${props.id}`}>
+                    <Button variant="outline">Learn More</Button>
+                </Link>
             </CardFooter>
         </Card>
     );

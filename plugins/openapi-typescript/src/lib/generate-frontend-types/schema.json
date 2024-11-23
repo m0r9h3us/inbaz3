@@ -1,0 +1,21 @@
+{
+    "$schema": "https://json-schema.org/schema",
+    "version": 2,
+    "title": "GenerateTypes executor",
+    "description": "",
+    "type": "object",
+    "properties": {
+        "schema": {
+            "type": "string",
+            "description": "Path or URL to the OpenAPI schema."
+        },
+        "output": {
+            "type": "string",
+            "description": "Path to save the generated TypeScript types."
+        }
+    },
+    "required": [
+        "schema",
+        "output"
+    ]
+}

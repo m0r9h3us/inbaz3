@@ -1,22 +1,13 @@
-import dayjs from 'dayjs';
-
 import { Separator, Switch } from '@juggling-hub/frontend/primitives';
-import { EventCardProps } from '@juggling-hub/frontend/domain/event/components';
-import { getMockEvents } from '@juggling-hub/frontend/domain/event/api-client';
+// import { EventCardProps } from '@juggling-hub/frontend/domain/event/components';
+import { fetchEventCollectionData } from '@juggling-hub/frontend/domain/event/api-client';
 import { EventCardCollection } from '@juggling-hub/frontend/domain/event/components';
 
 export default async function Events() {
-    const eventData = getMockEvents();
-
-    const events: Array<{ id: string } & EventCardProps> = eventData.map((event) => ({
-        id: event.id,
-        title: event.title,
-        start: dayjs(event.start),
-        end: dayjs(event.end),
-        city: event.location.city,
-        country: event.location.country,
-        description: event.description
-    }));
+    const { data, error } = await fetchEventCollectionData();
+    if (error) {
+        return <div>Error: {error.message}</div>;
+    }
 
     return (
         <div className="flex flex-col flex-1 gap-4 py-4 px-2">
@@ -28,7 +19,7 @@ export default async function Events() {
             </div>
             <Separator />
             <div className="pt-2">
-                <EventCardCollection events={events} />
+                <EventCardCollection events={data} />
             </div>
         </div>
     );
